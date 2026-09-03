@@ -1,0 +1,210 @@
+/* =========================================
+   COLOR PALETTE & VARIABLES (Yezath Gold Theme)
+   ========================================= */
+:root {
+    --bg-primary: #FAF9F6;
+    --text-primary: #1C1C1C;
+    --text-muted: #6B6B6B;
+    --border-color: #E2E2E2;
+    --gold-accent: #9f895b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+.brand-font {
+    font-family: 'Cinzel Decorative', 'Playfair Display', serif;
+    letter-spacing: 0.05em;
+    color: var(--gold-accent);
+}
+
+.py-section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.bg-light-soft {
+    background-color: #ffffff;
+}
+
+/* Navbar & Brand Logo Styling */
+.navbar {
+    padding: 1.2rem 0;
+    background: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar.scrolled {
+    background: rgba(250, 249, 246, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(159, 137, 91, 0.2);
+}
+
+.brand-logo-img {
+    height: 62px !important;
+    width: 62px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #9f895b;
+}
+
+.nav-link {
+    color: var(--text-primary) !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold-accent) !important;
+}
+
+/* =========================================
+   REAL COLORED SOCIAL MEDIA BUTTONS IN CONTENT
+   ========================================= */
+.social-content-bar .social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #FFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-content-bar .social-btn:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    color: #FFF;
+}
+
+.instagram-btn {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.facebook-btn {
+    background-color: #1877F2;
+}
+
+.linkedin-btn {
+    background-color: #0A66C2;
+}
+
+.carrd-btn {
+    background-color: #222222;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: linear-gradient(rgba(250, 249, 246, 0.92), rgba(250, 249, 246, 0.92)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2000&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+}
+
+.btn-custom {
+    border-width: 1px;
+    border-color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--gold-accent);
+    border-color: var(--gold-accent);
+    color: #fff;
+}
+
+/* =========================================
+   SHOWCASE & FACTORY IMAGE CONTAINERS (No Crop Fix)
+   ========================================= */
+.showcase-wrapper img, 
+.factory-grid-box img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* =========================================
+   COLLECTION CARDS (Catalog Images Fit)
+   ========================================= */
+.collection-card {
+    border-radius: 16px !important;
+    overflow: hidden;
+    background-color: #0f172a;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-card img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 16px !important;
+    transition: transform 0.5s ease;
+}
+
+.collection-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Editorial Form */
+.editorial-form .minimal-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease;
+}
+
+.editorial-form .minimal-input:focus {
+    border-color: var(--gold-accent);
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-5px);
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .collection-card {
+        height: 360px;
+    }
+}
